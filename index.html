@@ -16,10 +16,34 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
-    <h1 class="text-8xl font-bold underline">Hello world!</h1>
+    <container class="music-container">
 
-    <i class="fa-solid fa-play"></i>
+      <div class="music-info">
+        <h4 id="song-title">Aidan</h4>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
 
+        <audio src="songs/Aidan.mp3" id="audio"></audio>
+
+        <div class="image_container">
+          <img src="albumart/Aidan.jpg" alt="music-cover" id="cover">
+        </div>
+
+        <navigation>
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </navigation>
+
+      </div>
+    </container>
     <script src="main.js"></script>
   </body>
 </html>
