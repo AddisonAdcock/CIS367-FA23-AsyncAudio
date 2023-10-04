@@ -25,13 +25,12 @@ referrerpolicy="no-referrer"
         body {
             background-color: #666;
             text-align: center;
-            font-family: "Special Elite", serif;
             /* font-family: "Comic Sans MS", cursive, sans-serif; */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(45deg, #000000,#fff);
+            background: linear-gradient( #2c52db,#041d7a);;
 
         }
 
@@ -40,8 +39,6 @@ referrerpolicy="no-referrer"
         }
 
         #ugly-audio-player {
-            border: 5px solid black;
-            background-color: darkblue;
             padding: 20px;
             width: 400px;
             margin: 50px auto;
@@ -49,7 +46,7 @@ referrerpolicy="no-referrer"
         }
 
         #song-title {
-            color: blue;
+            color: White;
             font-size: 24px;
             text-decoration: underline;
         }
@@ -65,14 +62,14 @@ referrerpolicy="no-referrer"
 
         #audio-controls {
             margin-top: 20px;
-            background-color: green;
+            background-color: transparent;
             padding: 10px;
             width:100%;
         }
 
         button {
-            color: black;
-            background-color: darkblue;
+            color: white;
+            background-color: transparent;
             border: none;
             padding: 10px 20px;
             margin: 5px;
@@ -83,22 +80,46 @@ referrerpolicy="no-referrer"
         button:hover {
             color: black;
         }
+
+        .other_button{
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .other_button:hover {
+            color: grey;
+        }
     </style>
 </head>
 <body>
     <div id="ugly-audio-player">
-        <div id="song-title">Playing Suggested Song</div>
+
+        <!--Image-->
         <div id="albumart">
-            <img src="albumart/mountain.jpg" alt="" srcset="">
+            <img src="albumart/mountain.jpg" alt="" srcset=""">
         </div>
-        <div id="artist">Evan Kahan</div>
+
+        <!--Song Details-->
+        <div class="flex">
+            <h1>Song Title</h1>
+            <h3>Evan Kahan</h3>
+        </div>
+
+        <!--Audio Controls-->
         <audio controls id="audio-controls">
             <source src="your-audio-file.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+
         <!--Font Awesome Play Buttons-->
         <button><i class="fa-solid fa-backward-step"></i></button>
-        <button><i class="fa-solid fa-play"></i></button>
+        <button class="other_button flex justify-center align-middle text-center  p-25"><i class="fa-solid fa-play"></i></button>
         <button><i class="fa-solid fa-forward-step"></i></button>
     </div>
 </body>
